@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "WebSecBot",
+  "version": "1.0.0",
+  "description": "A Chrome extension to help you secure your web application.",
+  "permissions": ["sidePanel", "activeTab", "storage", "scripting", "webRequest", "tabs"],
+  "icons": {
+    "16": "websecbot.png",
+    "48": "websecbot.png",
+    "128": "websecbot.png"
+  },
+  "action": {
+    "default_title": "Open WebSecBot",
+    "default_icon": {
+      "16": "websecbot.png",
+      "48": "websecbot.png",
+      "128": "websecbot.png"
+    }
+  },
+  "host_permissions": ["*://*/*", "*://internetsecure.org/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  }
+}

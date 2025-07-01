@@ -1,0 +1,348 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 212 100% 42%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 212 100% 42%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #root {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+/* Chrome Side Panel Specific Styles */
+body {
+  min-width: 350px;
+  width: 100%;
+}
+
+.side-panel-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Enhanced Markdown Content Styles */
+.markdown-content {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #24292f;
+  padding: 0;
+}
+
+.markdown-content h1, 
+.markdown-content h2, 
+.markdown-content h3, 
+.markdown-content h4 {
+  font-weight: 600;
+  margin-top: 28px;
+  margin-bottom: 16px;
+  line-height: 1.25;
+  color: #0f3460;
+}
+
+.markdown-content h1 { font-size: 1.8em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+.markdown-content h2 { font-size: 1.5em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+.markdown-content h3 { 
+  font-size: 1.25em; 
+  color: #1e4da1;
+  background-color: #f0f6ff;
+  padding: 8px 12px;
+  border-left: 4px solid #1e4da1;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+.markdown-content h4 { font-size: 1em; }
+
+.markdown-content p {
+  margin: 0.9em 0;
+  line-height: 1.6;
+}
+
+/* Improved list styling */
+.markdown-content ul, 
+.markdown-content ol {
+  padding-left: 1.8em;
+  margin: 1em 0;
+}
+
+.markdown-content li {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+  position: relative;
+}
+
+.markdown-content li.li-enhanced {
+  padding-left: 0.2em;
+}
+
+.markdown-content li + li {
+  margin-top: 0.4em;
+}
+
+/* Better formatting for strong text (usually headings in LLM output) */
+.markdown-content strong {
+  font-weight: 600;
+  color: #1a4789;
+}
+
+/* Confidence level colors */
+.confidence-high {
+  color: #cc0000 !important;
+  font-weight: bold !important;
+}
+
+.confidence-medium {
+  color: #ff6600 !important;
+  font-weight: bold !important;
+}
+
+.confidence-low {
+  color: #ffcc00 !important;
+  font-weight: bold !important;
+}
+
+/* Add visual separation for content sections */
+.markdown-content hr {
+  height: 1px;
+  background-color: #e1e4e8;
+  border: none;
+  margin: 24px 0;
+}
+
+/* Better code blocks */
+.markdown-content pre {
+  margin: 1em 0;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  padding: 16px;
+  overflow: auto;
+  border-left: 3px solid #1e4da1;
+}
+
+.markdown-content code {
+  font-family: 'Fira Code', Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 14px;
+  background-color: rgba(175, 184, 193, 0.2);
+  padding: 0.2em 0.4em;
+}
+
+.markdown-content pre code {
+  background-color: transparent;
+  padding: 0;
+  display: block;
+  overflow-x: auto;
+}
+
+/* Improve blockquotes */
+.markdown-content blockquote {
+  padding: 0.5em 1em;
+  color: #444444;
+  border-left: 0.25em solid #1e4da1;
+  margin: 1em 0;
+  background-color: #f8f9fa;
+}
+
+/* Better table styling */
+.markdown-content table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-content table th {
+  font-weight: 600;
+  padding: 8px 16px;
+  border: 1px solid #dfe2e5;
+  background-color: #f6f8fa;
+}
+
+.markdown-content table td {
+  padding: 8px 16px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-content table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-content table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+/* Add some top margin to create space at the beginning */
+.markdown-content > *:first-child {
+  margin-top: 0.5em;
+}
+
+/* Make resizable elements show a resize handle */
+[style*="resize:vertical"] {
+  resize: vertical;
+  overflow: auto;
+  position: relative;
+}
+
+[style*="resize:vertical"]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: rgba(0, 0, 0, 0.05);
+  cursor: ns-resize;
+}
+
+[style*="resize:vertical"]:hover::after {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Prose utilities for Markdown */
+.prose {
+  max-width: 65ch;
+}
+
+.prose-blue {
+  --tw-prose-headings: #1e4da1;
+  --tw-prose-links: #1e4da1;
+}
+
+.max-w-none {
+  max-width: none;
+}
+
+/* Square corners for all UI elements */
+.rounded,
+.rounded-md,
+.rounded-lg,
+.rounded-full,
+button,
+input,
+select,
+textarea,
+.markdown-content code,
+.markdown-content pre > div {
+  border-radius: 0 !important;
+}
+
+/* Styles for textarea in chat */
+textarea {
+  resize: vertical;
+  min-height: 60px;
+  width: 100%;
+}
