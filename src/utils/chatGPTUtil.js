@@ -1,11 +1,8 @@
 import axios from "axios";
 
 // Define constants
-// const CHATGPT_END_POINT = "https://api.openai.com/v1/chat/completions";
-// const CHATGPT_MODEL = "my-new-workspace";
-
-const CHATGPT_END_POINT = "https://7499-131-130-126-95.ngrok-free.app/api/v1/openai/chat/completions";
-const CHATGPT_MODEL = "my-new-workspace";
+const CHATGPT_END_POINT = "http://localhost:3001/api/v1/openai/chat/completions";
+const CHATGPT_MODEL = "WebSecBot";
 
 // Function to send a message to the ChatGPT API and return the response
 export const postChatGPTMessage = async (message, conversationHistory, setConversationHistory, openAIKey, model = CHATGPT_MODEL, apiUrl = CHATGPT_END_POINT) => {
