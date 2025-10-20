@@ -395,7 +395,7 @@ USER QUESTION: ${newQuestion}`;
   // Helper function to get the content for the current tab
   const getCurrentTabContent = () => {
     return activeTab === "analysis" 
-      ? (analysisContent || "Click 'Analyze Website Security' to scan this website for vulnerabilities across OWASP Top Ten security categories.")
+      ? (analysisContent || "Click 'Analyze Website Security' to scan this website for vulnerabilities across OWASP Top Ten security categories. \n\n---\n\n⚠️ _By continuing, you confirm that you only scan domains you own or are authorized to test._")
       : (chatContent || "Ask any security-related questions in the chat box above.");
   };
 
@@ -471,7 +471,7 @@ USER QUESTION: ${newQuestion}`;
                   {isLoading ? "Analyzing..." : hasAnalyzed ? "Run Analysis Again" : "Analyze Website Security"}
                 </Button>
                 <p className="text-sm text-gray-600 mt-2 text-center">
-                  Performs a comprehensive scan across OWASP Top Ten security categories
+                  Performs a comprehensive scan across OWASP Top Ten security categories.
                 </p>
               </div>
             </div>
